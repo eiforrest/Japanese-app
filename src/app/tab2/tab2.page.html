@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Guess Hiraganas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary" class="ion-padding">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Guess</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Can you guess this Hiragana ?</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content *ngIf="hiragana$ | async as hiragana">
+      {{ hiragana.imageTitle }}
+      <img [src]="hiragana.imageTitle" />
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>Enter Hiragana</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
